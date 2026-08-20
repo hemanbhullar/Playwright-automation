@@ -11,6 +11,13 @@ export class UserDataGenerator {
         };
     }
 
+    public static generateCreateUserPayload(): { name: string; job: string } {
+        return {
+            name: faker.person.firstName(),
+            job: faker.person.jobTitle(),
+        };
+    }
+
     public static generateAdminUser(overrides?: Partial<User>): User {
         const defaultAdmin: User = {
             firstName: 'Admin',

@@ -10,9 +10,9 @@ interface EnvConfig {
 }
 
 const getEnvConfig = (): EnvConfig => {
-    const base_url = process.env.BASE_URL || '';
+    const base_url = process.env.BASE_URL || 'https://reqres.in';
     const api_token = process.env.API_TOKEN || '';
-    const env = process.env.ENV || '';
+    const env = process.env.ENV || 'local';
 
     if(!base_url) {
         throw new Error('BASE_URL is not defined in the environment variables.');
